@@ -21,6 +21,7 @@ with open(file_path, "r") as file:
                 start += len(word)
 
         # Sort insertions by index
+        # This is important because when we actually insert, we operate from right to left to ensure left indices are not messed up
         insertions.sort(key=lambda x: x[0])
 
         # Insert digits
